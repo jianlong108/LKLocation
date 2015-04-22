@@ -3,6 +3,13 @@
 请在真机测试
 
 ===
+使用前提：在info.plist中添加选项，二选一
+NSLocationAlwaysUsageDescription （boolean）
+NSLocationWhenInUseUsageDescription （boolean） 默认
+
+注：两者都添加，默认使用第二个
+
+===
 单例对象
 
 ```
