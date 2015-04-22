@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3S1-kZ-rdy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8bR-aJ-biZ">
+            <objects>
+                <viewController id="3S1-kZ-rdy" customClass="ViewController" customModule="LKLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cw2-oj-gtr"/>
+                        <viewControllerLayoutGuide type="bottom" id="IIK-sl-Tj7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVG-gb-e8j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-6W-WPZ">
+                                <rect key="frame" x="255" y="285" width="90" height="30"/>
+                                <state key="normal" title="获取详细位置">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAddress:" destination="3S1-kZ-rdy" eventType="touchUpInside" id="JTL-wQ-jnU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（位置）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-8l-ghG">
+                                <rect key="frame" x="272" y="120" width="56" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvj-hr-h1y">
+                                <rect key="frame" x="255" y="323" width="90" height="30"/>
+                                <state key="normal" title="获取城市位置">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCity:" destination="3S1-kZ-rdy" eventType="touchUpInside" id="zfr-mQ-g0W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZW-fD-Cfc">
+                                <rect key="frame" x="270" y="361" width="60" height="30"/>
+                                <state key="normal" title="获取坐标">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCoordinate:" destination="3S1-kZ-rdy" eventType="touchUpInside" id="iT2-cU-rkJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Xvj-hr-h1y" secondAttribute="centerX" id="8vE-fW-yVo"/>
+                            <constraint firstAttribute="centerX" secondItem="z43-6W-WPZ" secondAttribute="centerX" id="CkZ-Ce-7II"/>
+                            <constraint firstAttribute="centerX" secondItem="ZZW-fD-Cfc" secondAttribute="centerX" id="Fr0-Wz-v2n"/>
+                            <constraint firstItem="Xvj-hr-h1y" firstAttribute="top" secondItem="z43-6W-WPZ" secondAttribute="bottom" constant="8" id="UHP-uG-myA"/>
+                            <constraint firstAttribute="centerX" secondItem="aKI-8l-ghG" secondAttribute="centerX" id="Xqd-Jp-qH4"/>
+                            <constraint firstItem="ZZW-fD-Cfc" firstAttribute="top" secondItem="Xvj-hr-h1y" secondAttribute="bottom" constant="8" id="kvP-vs-ooW"/>
+                            <constraint firstItem="aKI-8l-ghG" firstAttribute="top" secondItem="Cw2-oj-gtr" secondAttribute="bottom" constant="100" id="lMw-Bn-9fD"/>
+                            <constraint firstAttribute="centerY" secondItem="z43-6W-WPZ" secondAttribute="centerY" id="r10-EE-biZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityInfo" destination="aKI-8l-ghG" id="cRp-tw-5Y5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Q4-M9-vhl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337" y="167"/>
+        </scene>
+    </scenes>
+</document>
